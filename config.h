@@ -1,4 +1,5 @@
 // Max's DWM rice
+// goddamn i hope this works this time
 /* See LICENSE file for copyright and license details. */
 
 #include "/home/m0on/.cache/wal/colors-wal-dwm.h"
