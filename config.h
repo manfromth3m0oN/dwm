@@ -28,10 +28,15 @@ static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
-	 */
+	 * Tag masks:
+	 * 	Tag 9 - 10000000 = 1 << 8
+	 * 	The whole point of this to create a bit mask with 1's where the window is allowed
+	*/
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "mpv",      NULL,       NULL,       0, 	    1,           -1 }, 
+	{ "discord",  NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "spotify",  NULL,       NULL,       1 << 8,       0,           -1 }, /* This requires the spotifywm spotify fix */
 };
 
 /* layout(s) */
